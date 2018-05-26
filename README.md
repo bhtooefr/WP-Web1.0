@@ -15,4 +15,4 @@ Websites using this theme should render perfectly in any user agent that is comp
 
 Additionally, JavaScript shall be avoided at all costs. This theme will use none of its own JavaScript, and I'll investigate having a configuration option for whether to disable wp-emoji-release.min.js and wp-embed.min.js (both automatically enabled, both not very necessary, and both able to be disabled from a theme, AFAIK). I think I'll leave the Toolbar alone, though, as you'll only get it when logged in.
 
-This will begin as a fork of Wordpress's Twenty Seventeen theme - might as well use their translation work and such.
+This will begin as a fork of Wordpress's Twenty Seventeen theme, version 1.6 - might as well use their translation work and such.
