@@ -34,9 +34,9 @@ if ( ! function_exists( 'twentyseventeen_time_link' ) ) :
 	 */
 	function twentyseventeen_time_link() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		/* if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-		}
+		} fix this later */
 
 		$time_string = sprintf(
 			$time_string,
@@ -82,11 +82,11 @@ if ( ! function_exists( 'twentyseventeen_entry_footer' ) ) :
 
 						// Make sure there's more than one category before displaying.
 					if ( $categories_list && twentyseventeen_categorized_blog() ) {
-						echo '<span class="cat-links">' . twentyseventeen_get_svg( array( 'icon' => 'folder-open' ) ) . '<span class="screen-reader-text">' . __( 'Categories', 'twentyseventeen' ) . '</span>' . $categories_list . '</span>';
+						echo '<dl><dt><span class="cat-links">' . __( 'Categories', 'twentyseventeen' ) . '</span></dt><dd>' . $categories_list . '</dd></span>';
 					}
 
 					if ( $tags_list && ! is_wp_error( $tags_list ) ) {
-						echo '<span class="tags-links">' . twentyseventeen_get_svg( array( 'icon' => 'hashtag' ) ) . '<span class="screen-reader-text">' . __( 'Tags', 'twentyseventeen' ) . '</span>' . $tags_list . '</span>';
+						echo '<dl><dt><span class="tags-links">' . __( 'Tags', 'twentyseventeen' ) . '</span></dt><dd>' . $tags_list . '</dd></span>';
 					}
 
 					echo '</span>';
