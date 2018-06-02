@@ -117,7 +117,7 @@ if ( ! function_exists( 'twentyseventeen_edit_link' ) ) :
 				__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
 				get_the_title()
 			),
-			'<span class="edit-link">',
+			' - <span class="edit-link">',
 			'</span>'
 		);
 	}
